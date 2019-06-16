@@ -105,12 +105,11 @@
 		2E89997D22B39D430046472C /* MarsRover */ = {
 			isa = PBXGroup;
 			children = (
+				2EDD59C122B6250900943444 /* Rover Helper */,
+				2EDD59C022B624EE00943444 /* Rover Input */,
 				2E89997E22B39D430046472C /* AppDelegate.swift */,
-				2E89998022B39D430046472C /* MarsRoverViewController.swift */,
 				2EDD59BE22B61E9300943444 /* RoverPosition.swift */,
 				2E89999E22B39EA60046472C /* Rover.swift */,
-				2EDD59AC22B4FFA600943444 /* ExtensionHelper.swift */,
-				2EDD59AE22B545A800943444 /* Constants.swift */,
 				2E89998222B39D430046472C /* Main.storyboard */,
 				2E89998522B39D440046472C /* Assets.xcassets */,
 				2E89998722B39D440046472C /* LaunchScreen.storyboard */,
@@ -135,6 +134,23 @@
 				2EDD59B822B5F8D800943444 /* Info.plist */,
 			);
 			path = MarsRoverUITests;
+			sourceTree = "<group>";
+		};
+		2EDD59C022B624EE00943444 /* Rover Input */ = {
+			isa = PBXGroup;
+			children = (
+				2E89998022B39D430046472C /* MarsRoverViewController.swift */,
+			);
+			path = "Rover Input";
+			sourceTree = "<group>";
+		};
+		2EDD59C122B6250900943444 /* Rover Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2EDD59AC22B4FFA600943444 /* ExtensionHelper.swift */,
+				2EDD59AE22B545A800943444 /* Constants.swift */,
+			);
+			path = "Rover Helper";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
