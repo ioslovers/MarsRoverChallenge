@@ -40,7 +40,7 @@ MMRMMRMRRM
 1 3 N
 5 1 E
 
-STRATEGY:
+STRATEGY to solve this problem:
 1) At the outset of this problem I have created the problem on the below image, and created soultion the the paper.
 ![](PaperGraphMarsRover.png)
 
