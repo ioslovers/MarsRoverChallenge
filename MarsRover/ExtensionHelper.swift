@@ -31,3 +31,23 @@ extension UIViewController {
         return tap
     }
 }
+
+extension Rover {
+    func convertRoverPositionToString() -> String {
+        let facing: String
+        switch self.currentPosition().direction {
+        case .north:
+            facing = "N"
+        case .east:
+            facing = "E"
+        case .west:
+            facing = "W"
+        case .south:
+            facing = "S"
+        }
+        
+        return String(format: "%@ %@ %@", arguments: [self.currentPosition().xValue.description,
+                                                                     self.currentPosition().yValue.description,
+                                                                     facing])
+    }
+}

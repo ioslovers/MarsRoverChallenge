@@ -63,15 +63,14 @@ class MarsRoverViewController: UIViewController {
             let rawValueDirection = Direction(rawValue: segmentControlDirection.selectedSegmentIndex + 1),
             let command = textFieldCommand?.text else { return }
         
-        rover.setPosition(xPoint: Int(xValue) ?? 0,
-                          yPoint: Int(yValue) ?? 0,
+        rover.setPosition(xPoint: Int64(xValue) ?? 0,
+                          yPoint: Int64(yValue) ?? 0,
                           facing: rawValueDirection)
         
         rover.processRoverCommand(command: command)
-        let printMessage = rover.currentPosition()
         
         let alertController = UIAlertController(title: "Current Rover Location",
-                                                message: printMessage,
+                                                message: rover.convertRoverPositionToString(),
                                                 preferredStyle: .alert)
         
         let alertAction = UIAlertAction(title: "Ok", style: .default) { [weak self]_ in

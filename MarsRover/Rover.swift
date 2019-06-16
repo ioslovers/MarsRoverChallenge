@@ -8,29 +8,29 @@ public enum Direction: Int {
 final class Rover {
     
     // MARK:- Private Variables
-    private var xPoint = 0
-    private var yPoint = 0
+    private var xPoint: Int64 = 0
+    private var yPoint: Int64 = 0
     private lazy var facing: Direction = {
         return .north
     }()
     
     // MARK:- Public Functions
-    public func setPosition(xPoint:Int, yPoint:Int, facing:Direction){
+    public func setPosition(xPoint:Int64, yPoint:Int64, facing:Direction){
         self.xPoint = xPoint
         self.yPoint = yPoint
         self.facing = facing
     }
     
-    @discardableResult public func currentPosition() -> String {
+    @discardableResult public func currentPosition() -> RoverPosition {
         switch facing {
         case .north:
-            return "\(xPoint) \(yPoint) N"
+            return RoverPosition(xValue: xPoint, yValue: yPoint, direction: .north)
         case .east:
-            return "\(xPoint) \(yPoint) E"
+            return RoverPosition(xValue: xPoint, yValue: yPoint, direction: .east)
         case .south:
-            return "\(xPoint) \(yPoint) S"
+            return RoverPosition(xValue: xPoint, yValue: yPoint, direction: .south)
         case .west:
-            return "\(xPoint) \(yPoint) W"
+            return RoverPosition(xValue: xPoint, yValue: yPoint, direction: .west)
         }
     }
     

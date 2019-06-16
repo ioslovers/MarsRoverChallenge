@@ -29,9 +29,7 @@ class MarsRoverTests: XCTestCase {
                           facing: .north)
         
         rover.processRoverCommand(command: "LMLMLMLMM")
-        let roverCurrentPosition = rover.currentPosition()
-        print(roverCurrentPosition)
-        XCTAssertEqual(expectedOutput, roverCurrentPosition)
+        XCTAssertEqual(expectedOutput, rover.convertRoverPositionToString())
         
     }
     
@@ -44,7 +42,7 @@ class MarsRoverTests: XCTestCase {
         rover.processRoverCommand(command: "MMRMMRMRRM")
         let roverCurrentPosition = rover.currentPosition()
         print(roverCurrentPosition)
-        XCTAssertEqual(expectedOutput, roverCurrentPosition)
+        XCTAssertEqual(expectedOutput, rover.convertRoverPositionToString())
         
     }
     
@@ -57,7 +55,7 @@ class MarsRoverTests: XCTestCase {
         rover.processRoverCommand(command: "LMLMLMLM")
         let roverCurrentPosition = rover.currentPosition()
         print(roverCurrentPosition)
-        XCTAssertEqual(expectedOutput, roverCurrentPosition)
+        XCTAssertEqual(expectedOutput, rover.convertRoverPositionToString())
         
     }
     
@@ -70,7 +68,7 @@ class MarsRoverTests: XCTestCase {
         rover.processRoverCommand(command: "LMLMLMLMLMM")
         let roverCurrentPosition = rover.currentPosition()
         print(roverCurrentPosition)
-        XCTAssertEqual(expectedOutput, roverCurrentPosition)
+        XCTAssertEqual(expectedOutput, rover.convertRoverPositionToString())
         
     }
 

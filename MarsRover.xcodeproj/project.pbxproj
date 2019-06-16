@@ -17,6 +17,7 @@
 		2EDD59AD22B4FFA600943444 /* ExtensionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD59AC22B4FFA600943444 /* ExtensionHelper.swift */; };
 		2EDD59AF22B545A800943444 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD59AE22B545A800943444 /* Constants.swift */; };
 		2EDD59B722B5F8D800943444 /* MarsRoverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD59B622B5F8D800943444 /* MarsRoverUITests.swift */; };
+		2EDD59BF22B61E9300943444 /* RoverPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDD59BE22B61E9300943444 /* RoverPosition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		2EDD59B422B5F8D800943444 /* MarsRoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsRoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDD59B622B5F8D800943444 /* MarsRoverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverUITests.swift; sourceTree = "<group>"; };
 		2EDD59B822B5F8D800943444 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EDD59BE22B61E9300943444 /* RoverPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverPosition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				2E89997E22B39D430046472C /* AppDelegate.swift */,
 				2E89998022B39D430046472C /* MarsRoverViewController.swift */,
+				2EDD59BE22B61E9300943444 /* RoverPosition.swift */,
 				2E89999E22B39EA60046472C /* Rover.swift */,
 				2EDD59AC22B4FFA600943444 /* ExtensionHelper.swift */,
 				2EDD59AE22B545A800943444 /* Constants.swift */,
@@ -268,6 +271,7 @@
 				2EDD59AF22B545A800943444 /* Constants.swift in Sources */,
 				2E89998122B39D430046472C /* MarsRoverViewController.swift in Sources */,
 				2EDD59AD22B4FFA600943444 /* ExtensionHelper.swift in Sources */,
+				2EDD59BF22B61E9300943444 /* RoverPosition.swift in Sources */,
 				2E89997F22B39D430046472C /* AppDelegate.swift in Sources */,
 				2E89999F22B39EA60046472C /* Rover.swift in Sources */,
 			);
