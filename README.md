@@ -43,9 +43,13 @@ MMRMMRMRRM
 
 5 1 E
 
-STRATEGY to solve this problem:
+#STRATEGY to solve this problem:
 1) At the outset of this problem I have created the problem on the below image, and created soultion the the paper.
 
 ![](PaperGraphMarsRover.jpg)
+
+# Unit Testing Coverage is ~83%
+![](UnitTestCoverage.png)
+
 
 
