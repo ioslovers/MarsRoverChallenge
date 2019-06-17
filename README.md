@@ -1,5 +1,14 @@
+# Requirements to run this sample:
+
+1. XCode 10.1 and iOS version 11.0 onwards.
+2. Sample using Swift 4.2.
+3. I am not using any third-party dependencies code, not Cocoa pod nor Carthage.
+4. This sample code is also covering the unit and UI test case using XCTestCase.
+5. This sample uses MVC design pattern, Strategy Design Pattern
+
+
+
 ![](MarsRoverDemo1.gif)
-![](MarsRoverDemo2.gif)
 # MarsRoverChallenge
 
 * Mars Rover Challenge:
