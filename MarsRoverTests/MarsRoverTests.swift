@@ -26,7 +26,7 @@ class MarsRoverTests: XCTestCase {
         let rover = Rover()
         rover.setPosition(xPoint: 1,
                           yPoint: 2,
-                          facing: .north)
+                          direction: .north)
         
         rover.processRoverCommand(command: "LMLMLMLMM")
         XCTAssertEqual(expectedOutput, rover.convertRoverPositionToString())
@@ -37,7 +37,7 @@ class MarsRoverTests: XCTestCase {
         let expectedOutput = "5 1 E"
         rover.setPosition(xPoint: 3,
                           yPoint: 3,
-                          facing: .east)
+                          direction: .east)
         
         rover.processRoverCommand(command: "MMRMMRMRRM")
         let roverCurrentPosition = rover.currentPosition()
@@ -50,7 +50,7 @@ class MarsRoverTests: XCTestCase {
         let expectedOutput = "4 4 W"
         rover.setPosition(xPoint: 4,
                           yPoint: 4,
-                          facing: .west)
+                          direction: .west)
         
         rover.processRoverCommand(command: "LMLMLMLM")
         let roverCurrentPosition = rover.currentPosition()
@@ -63,7 +63,7 @@ class MarsRoverTests: XCTestCase {
         let expectedOutput = "4 2 S"
         rover.setPosition(xPoint: 4,
                           yPoint: 4,
-                          facing: .west)
+                          direction: .west)
         
         rover.processRoverCommand(command: "LMLMLMLMLMM")
         let roverCurrentPosition = rover.currentPosition()
@@ -71,12 +71,4 @@ class MarsRoverTests: XCTestCase {
         XCTAssertEqual(expectedOutput, rover.convertRoverPositionToString())
         
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

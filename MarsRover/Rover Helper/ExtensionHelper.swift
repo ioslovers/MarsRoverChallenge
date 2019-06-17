@@ -8,15 +8,6 @@
 
 import UIKit
 
-extension UIButton {
-    func setBorder() {
-        backgroundColor = .clear
-        layer.cornerRadius = 5
-        layer.borderWidth = 1
-        layer.borderColor = UIColor.blue.cgColor
-    }
-}
-
 extension UIViewController {
     /// Call this once to dismiss open keyboards by tapping anywhere in the view controller
     func setupHideKeyboardOnTap() {
@@ -33,9 +24,13 @@ extension UIViewController {
 }
 
 extension Rover {
+    
+    /// Converts Rover position into a String format.
+    /// @returns String
     func convertRoverPositionToString() -> String {
         let facing: String
-        switch self.currentPosition().direction {
+        
+        switch currentPosition().direction {
         case .north:
             facing = "N"
         case .east:
@@ -46,8 +41,8 @@ extension Rover {
             facing = "S"
         }
         
-        return String(format: "%@ %@ %@", arguments: [self.currentPosition().xValue.description,
-                                                                     self.currentPosition().yValue.description,
+        return String(format: "%@ %@ %@", arguments: [currentPosition().xValue.description,
+                                                                     currentPosition().yValue.description,
                                                                      facing])
     }
 }

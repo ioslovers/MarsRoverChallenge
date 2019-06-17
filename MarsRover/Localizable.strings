@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  MarsRover
+
+  Created by Ashish Tripathi on 17/6/19.
+  Copyright © 2019 Ashish Tripathi. All rights reserved.
+*/
+
+"localizableAlertTitle" = "Current Rover Location";
+"localizableOkButton" = "Ok";
+

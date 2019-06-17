@@ -9,8 +9,14 @@
 import Foundation
 
 struct RoverPosition {
+    
+    /// xValue is a X unit of coordinate (X, Y).
     let xValue: Int64
+    
+    /// yValue is a Y unit of coordinate (X, Y).
     let yValue: Int64
+    
+    /// direction is a direction of Rover for example (North, South, East, West).
     let direction: Direction
     
     init(xValue: Int64, yValue: Int64, direction: Direction) {

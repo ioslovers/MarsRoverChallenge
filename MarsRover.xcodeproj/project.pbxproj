@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2DAE0622B6883400ED0CFC /* RounderCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DAE0522B6883400ED0CFC /* RounderCornerButton.swift */; };
+		2E2DAE0922B71DC600ED0CFC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DAE0822B71DC600ED0CFC /* Alert.swift */; };
+		2E2DAE0B22B721AA00ED0CFC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DAE0A22B721AA00ED0CFC /* Localizable.strings */; };
 		2E89997F22B39D430046472C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E89997E22B39D430046472C /* AppDelegate.swift */; };
 		2E89998122B39D430046472C /* MarsRoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E89998022B39D430046472C /* MarsRoverViewController.swift */; };
 		2E89998422B39D430046472C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E89998222B39D430046472C /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E2DAE0522B6883400ED0CFC /* RounderCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RounderCornerButton.swift; sourceTree = "<group>"; };
+		2E2DAE0822B71DC600ED0CFC /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		2E2DAE0A22B721AA00ED0CFC /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		2E89997B22B39D430046472C /* MarsRover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsRover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E89997E22B39D430046472C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E89998022B39D430046472C /* MarsRoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E2DAE0722B7198400ED0CFC /* Rover */ = {
+			isa = PBXGroup;
+			children = (
+				2E89999E22B39EA60046472C /* Rover.swift */,
+				2EDD59BE22B61E9300943444 /* RoverPosition.swift */,
+			);
+			path = Rover;
+			sourceTree = "<group>";
+		};
 		2E89997222B39D430046472C = {
 			isa = PBXGroup;
 			children = (
@@ -105,15 +120,15 @@
 		2E89997D22B39D430046472C /* MarsRover */ = {
 			isa = PBXGroup;
 			children = (
-				2EDD59C122B6250900943444 /* Rover Helper */,
-				2EDD59C022B624EE00943444 /* Rover Input */,
 				2E89997E22B39D430046472C /* AppDelegate.swift */,
-				2E89999E22B39EA60046472C /* Rover.swift */,
-				2EDD59BE22B61E9300943444 /* RoverPosition.swift */,
+				2E2DAE0722B7198400ED0CFC /* Rover */,
+				2EDD59C122B6250900943444 /* Rover Helper */,
+				2EDD59C022B624EE00943444 /* Rover Input View Controller */,
 				2E89998222B39D430046472C /* Main.storyboard */,
 				2E89998522B39D440046472C /* Assets.xcassets */,
 				2E89998722B39D440046472C /* LaunchScreen.storyboard */,
 				2E89998A22B39D440046472C /* Info.plist */,
+				2E2DAE0A22B721AA00ED0CFC /* Localizable.strings */,
 			);
 			path = MarsRover;
 			sourceTree = "<group>";
@@ -136,19 +151,21 @@
 			path = MarsRoverUITests;
 			sourceTree = "<group>";
 		};
-		2EDD59C022B624EE00943444 /* Rover Input */ = {
+		2EDD59C022B624EE00943444 /* Rover Input View Controller */ = {
 			isa = PBXGroup;
 			children = (
 				2E89998022B39D430046472C /* MarsRoverViewController.swift */,
 			);
-			path = "Rover Input";
+			path = "Rover Input View Controller";
 			sourceTree = "<group>";
 		};
 		2EDD59C122B6250900943444 /* Rover Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2E2DAE0822B71DC600ED0CFC /* Alert.swift */,
 				2EDD59AC22B4FFA600943444 /* ExtensionHelper.swift */,
 				2EDD59AE22B545A800943444 /* Constants.swift */,
+				2E2DAE0522B6883400ED0CFC /* RounderCornerButton.swift */,
 			);
 			path = "Rover Helper";
 			sourceTree = "<group>";
@@ -258,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E89998922B39D440046472C /* LaunchScreen.storyboard in Resources */,
+				2E2DAE0B22B721AA00ED0CFC /* Localizable.strings in Resources */,
 				2E89998622B39D440046472C /* Assets.xcassets in Resources */,
 				2E89998422B39D430046472C /* Main.storyboard in Resources */,
 			);
@@ -287,8 +305,10 @@
 				2EDD59AF22B545A800943444 /* Constants.swift in Sources */,
 				2E89998122B39D430046472C /* MarsRoverViewController.swift in Sources */,
 				2EDD59AD22B4FFA600943444 /* ExtensionHelper.swift in Sources */,
+				2E2DAE0622B6883400ED0CFC /* RounderCornerButton.swift in Sources */,
 				2EDD59BF22B61E9300943444 /* RoverPosition.swift in Sources */,
 				2E89997F22B39D430046472C /* AppDelegate.swift in Sources */,
+				2E2DAE0922B71DC600ED0CFC /* Alert.swift in Sources */,
 				2E89999F22B39EA60046472C /* Rover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,7 +35,6 @@ class MarsRoverUITests: XCTestCase {
         let buttonMoveButton = marsRoverApp.buttons["buttonMoveIdentifier"]
         let buttonDoneButton = marsRoverApp.buttons["buttonDoneIdentifier"]
         
-        
         textFieldX.typeText("1")
         textFieldY.tap()
         textFieldY.typeText("2")

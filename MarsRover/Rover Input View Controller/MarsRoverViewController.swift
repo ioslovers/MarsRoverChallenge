@@ -23,7 +23,6 @@ class MarsRoverViewController: UIViewController {
     
     // MARK:- Private Variables
     private lazy var rover = Rover()
-    
     private var commandText = ""
     
     // MARK:- View Controller life cycle
@@ -32,21 +31,17 @@ class MarsRoverViewController: UIViewController {
         setupView()
     }
     
+    /// Setup view and basic routine.
     private func setupView() {
         textFieldXValue.becomeFirstResponder()
         textFieldXValue.delegate = self
         textFieldYValue.delegate = self
-        
-        buttonLeft.setBorder()
-        buttonRight.setBorder()
-        buttonMove.setBorder()
-        buttonDone.setBorder()
-        buttonReset.setBorder()
-        
         setupHideKeyboardOnTap()
     }
     
     // MARK:- Private Functions
+    
+    /// Reset rover's input fields such as X, Y, Direction and Command.
     private func resetRover() {
         textFieldCommand.text = ""
         commandText = ""
@@ -55,7 +50,21 @@ class MarsRoverViewController: UIViewController {
         textFieldYValue.text = ""
     }
     
+    /// shows alert to get the Rover location.
+    private func showAlert(title: String, message: String) {
+        let alert = Alert.init(title: title,
+                               subTitle: message,
+                               buttonTitles: [],
+                               cancelTitle: NSLocalizedString("localizableOkButton", comment: ""))
+        alert.presentAlert(from: self, actionHandler: { (_, _) in }) {  [weak self] _ in
+            guard let weakSelf = self else { return }
+            weakSelf.resetRover()
+        }
+    }
+    
     // MARK:- Button actions
+    
+    /// Done button action which shows Rover's current location for example (1 3 N)
     @IBAction func doneButtonAction(_ sender: Any) {
         
         guard let xValue = textFieldXValue.text,
@@ -65,37 +74,32 @@ class MarsRoverViewController: UIViewController {
         
         rover.setPosition(xPoint: Int64(xValue) ?? 0,
                           yPoint: Int64(yValue) ?? 0,
-                          facing: rawValueDirection)
+                          direction: rawValueDirection)
         
         rover.processRoverCommand(command: command)
-        
-        let alertController = UIAlertController(title: "Current Rover Location",
-                                                message: rover.convertRoverPositionToString(),
-                                                preferredStyle: .alert)
-        
-        let alertAction = UIAlertAction(title: "Ok", style: .default) { [weak self]_ in
-            guard let weakSelf = self else { return }
-            weakSelf.resetRover()
-        }
-        alertController.addAction(alertAction)
-        present(alertController, animated: true, completion: nil)
+        showAlert(title: NSLocalizedString("localizableAlertTitle", comment: ""),
+                  message: rover.convertRoverPositionToString())
     }
     
+    /// Left button action which performed move command for the Rover.
     @IBAction func leftButtonAction(_ sender: Any) {
         commandText.append("L")
         textFieldCommand.text = commandText
     }
     
+    /// Right button action which performed move command for the Rover.
     @IBAction func rightButtonAction(_ sender: Any) {
         commandText.append("R")
         textFieldCommand.text = commandText
     }
     
+    /// Move button action which performed move command for the Rover.
     @IBAction func moveButtonAction(_ sender: Any) {
         commandText.append("M")
         textFieldCommand.text = commandText
     }
     
+    /// Reset button action which clears rover's input fields such as X, Y, Direction and Command.
     @IBAction func resetButtonAction(_ sender: Any?) {
         resetRover()
     }
